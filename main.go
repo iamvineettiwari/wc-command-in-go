@@ -71,6 +71,7 @@ func getOptionAndInputData() ([]string, string, []byte) {
 		if err == nil {
 			filename = pathString
 			io.Copy(&data, file)
+			file.Close()
 		} else {
 			filename = "total"
 			fmt.Println("ERROR : ", err)
